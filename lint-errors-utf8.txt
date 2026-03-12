@@ -1,0 +1,53 @@
+﻿
+> ct-app-temp@0.1.0 lint
+> eslint --quiet
+
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\components\ManualGuide.tsx
+  121:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\components\ManualGuide.tsx:121:13
+  119 |     useEffect(() => {
+  120 |         if (!isOpen) {
+> 121 |             setZoom(100);
+      |             ^^^^^^^ Avoid calling setState() directly within an effect
+  122 |             setIsLoading(true);
+  123 |             return;
+  124 |         }  react-hooks/set-state-in-effect
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\public\pdf.worker.min.mjs
+  28:536561  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  28:544959  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  28:592801  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  28:642875  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  28:644528  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  28:902258  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  28:946062  error  Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\public\wasm\openjpeg_nowasm_fallback.js
+  16:69    error  Do not assign to the variable `module`. See: https://nextjs.org/docs/messages/no-assign-module-variable  @next/next/no-assign-module-variable
+  16:1522  error  Do not assign to the variable `module`. See: https://nextjs.org/docs/messages/no-assign-module-variable  @next/next/no-assign-module-variable
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\scripts\extract-figures.cjs
+  17:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  18:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  55:30  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  56:22  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  57:19  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\scripts\extract-manual.cjs
+   6:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   7:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  20:22  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor\scripts\test-pdf.cjs
+  1:11  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+Γ£û 19 problems (19 errors, 0 warnings)
+

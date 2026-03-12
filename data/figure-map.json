@@ -1,0 +1,652 @@
+[
+  {
+    "figure": 1,
+    "caption": "Authorization screen",
+    "page": 16
+  },
+  {
+    "figure": 2,
+    "caption": "Use the Cerberus Options menu bar item to configure preferences",
+    "page": 20
+  },
+  {
+    "figure": 6,
+    "caption": "The Units Management dialog displays the custom unit sets available for export",
+    "page": 23
+  },
+  {
+    "figure": 9,
+    "caption": "The Cerberus Setup display screen contains",
+    "page": 26
+  },
+  {
+    "figure": 10,
+    "caption": "Cerberus Main Menu",
+    "page": 38
+  },
+  {
+    "figure": 12,
+    "caption": "Cerberus File Menu",
+    "page": 41
+  },
+  {
+    "figure": 13,
+    "caption": "Cerberus Models Menu",
+    "page": 41
+  },
+  {
+    "figure": 14,
+    "caption": "Cerberus Calculations Menu",
+    "page": 42
+  },
+  {
+    "figure": 15,
+    "caption": "Cerberus Editors Menu",
+    "page": 42
+  },
+  {
+    "figure": 16,
+    "caption": "Cerberus Utilities Menu",
+    "page": 42
+  },
+  {
+    "figure": 17,
+    "caption": "Cerberus Orion Menu",
+    "page": 42
+  },
+  {
+    "figure": 18,
+    "caption": "Cerberus Options Menu",
+    "page": 42
+  },
+  {
+    "figure": 19,
+    "caption": "Cerberus Help Menu",
+    "page": 43
+  },
+  {
+    "figure": 20,
+    "caption": "A dialog appears detailing the Files Selected for Import.",
+    "page": 44
+  },
+  {
+    "figure": 56,
+    "caption": "Job Log Job - data Display Screen before Data is Entered/Imported",
+    "page": 82
+  },
+  {
+    "figure": 57,
+    "caption": "Job Log Post - Job - Run",
+    "page": 83
+  },
+  {
+    "figure": 59,
+    "caption": "Orpheus Opening Dialog",
+    "page": 86
+  },
+  {
+    "figure": 60,
+    "caption": "New Project Dialog",
+    "page": 87
+  },
+  {
+    "figure": 63,
+    "caption": "Orpheus Coiled Tubing Configuration Tab",
+    "page": 91
+  },
+  {
+    "figure": 64,
+    "caption": "Orpheus Jointed Pipe",
+    "page": 92
+  },
+  {
+    "figure": 65,
+    "caption": "Orpheus Wireline Configuration Tab",
+    "page": 93
+  },
+  {
+    "figure": 71,
+    "caption": "Orpheus Project Display Screen",
+    "page": 97
+  },
+  {
+    "figure": 72,
+    "caption": "Coiled Tubing Standard - C alculation Buttons",
+    "page": 98
+  },
+  {
+    "figure": 73,
+    "caption": "Wireline Standard - C alculation",
+    "page": 99
+  },
+  {
+    "figure": 74,
+    "caption": "Jointed Pipe",
+    "page": 100
+  },
+  {
+    "figure": 75,
+    "caption": "Maximum Depth Calculation",
+    "page": 101
+  },
+  {
+    "figure": 77,
+    "caption": "Surface Weight vs. Depth (CT)",
+    "page": 103
+  },
+  {
+    "figure": 78,
+    "caption": "Surface Weight vs. Depth (WL)",
+    "page": 103
+  },
+  {
+    "figure": 83,
+    "caption": "Coiled Tubing Run at Depth Graph",
+    "page": 108
+  },
+  {
+    "figure": 84,
+    "caption": "Wireline Run at Depth Graph",
+    "page": 109
+  },
+  {
+    "figure": 87,
+    "caption": "Run at Depth: Modeled Data Table (Mechanical Data)",
+    "page": 111
+  },
+  {
+    "figure": 88,
+    "caption": "Run at Depth:",
+    "page": 111
+  },
+  {
+    "figure": 90,
+    "caption": "Coiled Tubing Set Down Force Graph",
+    "page": 113
+  },
+  {
+    "figure": 91,
+    "caption": "Jointed Pipe Set Down Force Graph",
+    "page": 113
+  },
+  {
+    "figure": 92,
+    "caption": "Coiled Tubing Maximum Pick - up Force Calculation",
+    "page": 114
+  },
+  {
+    "figure": 93,
+    "caption": "Wireline Forces on Tool & Cable Calculation",
+    "page": 115
+  },
+  {
+    "figure": 94,
+    "caption": "Coiled Tubing Analysis Tools",
+    "page": 116
+  },
+  {
+    "figure": 95,
+    "caption": "Sensitivity Analysis Wizard",
+    "page": 117
+  },
+  {
+    "figure": 96,
+    "caption": "Sensitivity Analysis File Menu",
+    "page": 118
+  },
+  {
+    "figure": 98,
+    "caption": "Sensitivity Analysis Edit Menu",
+    "page": 119
+  },
+  {
+    "figure": 99,
+    "caption": "Sensitivity Analysis Options Menu",
+    "page": 119
+  },
+  {
+    "figure": 100,
+    "caption": "Sensitivity Analysis Tools Menu",
+    "page": 120
+  },
+  {
+    "figure": 101,
+    "caption": "Project Information Panel",
+    "page": 120
+  },
+  {
+    "figure": 102,
+    "caption": "Sensitivity Setting Panel",
+    "page": 121
+  },
+  {
+    "figure": 103,
+    "caption": "Sensitivity Setting Panel",
+    "page": 122
+  },
+  {
+    "figure": 104,
+    "caption": "Sensitivity Setting Panel",
+    "page": 122
+  },
+  {
+    "figure": 105,
+    "caption": "Sensitivity Analysis Panel",
+    "page": 123
+  },
+  {
+    "figure": 108,
+    "caption": "Parameter Matrix Wizard",
+    "page": 125
+  },
+  {
+    "figure": 109,
+    "caption": "Numeric Parameter Value Editor",
+    "page": 126
+  },
+  {
+    "figure": 110,
+    "caption": "Non - numeric Parameter Value Editor",
+    "page": 126
+  },
+  {
+    "figure": 111,
+    "caption": "Sensitivity Setting Panel in Sensitivity Analysis Wizard",
+    "page": 128
+  },
+  {
+    "figure": 112,
+    "caption": "Sensitivity Analysis Parameters",
+    "page": 129
+  },
+  {
+    "figure": 113,
+    "caption": "Available Sensitivity Analysis Outputs",
+    "page": 129
+  },
+  {
+    "figure": 139,
+    "caption": "Calculated Limit Pump Rates",
+    "page": 154
+  },
+  {
+    "figure": 154,
+    "caption": "Hydra Opening Dialog",
+    "page": 169
+  },
+  {
+    "figure": 155,
+    "caption": "New Hydra Project dialog",
+    "page": 172
+  },
+  {
+    "figure": 156,
+    "caption": "he Configuration display screen appears.",
+    "page": 173
+  },
+  {
+    "figure": 160,
+    "caption": "The Selec t Fluids display screen appears",
+    "page": 176
+  },
+  {
+    "figure": 162,
+    "caption": "The Initial Fluid Distribution display screen appear",
+    "page": 177
+  },
+  {
+    "figure": 164,
+    "caption": "Select the Mode ta b from the Hydra",
+    "page": 178
+  },
+  {
+    "figure": 165,
+    "caption": "Select the Mode menu - bar item from the",
+    "page": 179
+  },
+  {
+    "figure": 168,
+    "caption": "Advance Fluids",
+    "page": 180
+  },
+  {
+    "figure": 171,
+    "caption": "The Stage Table Configuration dialog appears",
+    "page": 182
+  },
+  {
+    "figure": 173,
+    "caption": "Fill Removal Wizard",
+    "page": 186
+  },
+  {
+    "figure": 175,
+    "caption": "Well Unloading Interface, Depth Analysis Tab",
+    "page": 189
+  },
+  {
+    "figure": 176,
+    "caption": "In put the desired range; click OK",
+    "page": 189
+  },
+  {
+    "figure": 177,
+    "caption": "Well Unloading Interface, Rate Analysis Tab",
+    "page": 191
+  },
+  {
+    "figure": 178,
+    "caption": "Well Unloading Interface, Results Tab",
+    "page": 192
+  },
+  {
+    "figure": 179,
+    "caption": "Multiphase Wizard",
+    "page": 193
+  },
+  {
+    "figure": 180,
+    "caption": "Analysis Wizard",
+    "page": 193
+  },
+  {
+    "figure": 181,
+    "caption": "Job Design Wizard",
+    "page": 194
+  },
+  {
+    "figure": 182,
+    "caption": "Velocity String Opening Dialog",
+    "page": 196
+  },
+  {
+    "figure": 183,
+    "caption": "New Velocity String Project dialog",
+    "page": 197
+  },
+  {
+    "figure": 184,
+    "caption": "The Velocity String configuration display - screen appears",
+    "page": 198
+  },
+  {
+    "figure": 195,
+    "caption": "The Packer and Completion Analysi s wizard display screen appears",
+    "page": 209
+  },
+  {
+    "figure": 202,
+    "caption": "The Tool String Editor appears.",
+    "page": 214
+  },
+  {
+    "figure": 203,
+    "caption": "The Tool Editor display screen appears",
+    "page": 214
+  },
+  {
+    "figure": 210,
+    "caption": "Solids Cleanout Opening Dialog",
+    "page": 221
+  },
+  {
+    "figure": 211,
+    "caption": "New Solids Cleanout Project dialog",
+    "page": 223
+  },
+  {
+    "figure": 217,
+    "caption": "The Select Tool String dialog appears",
+    "page": 229
+  },
+  {
+    "figure": 226,
+    "caption": "The New String dialog appears",
+    "page": 242
+  },
+  {
+    "figure": 227,
+    "caption": "String Design Wizard",
+    "page": 245
+  },
+  {
+    "figure": 238,
+    "caption": "The Retire String dialog A ppears",
+    "page": 260
+  },
+  {
+    "figure": 239,
+    "caption": "The String Print",
+    "page": 261
+  },
+  {
+    "figure": 243,
+    "caption": "Select a Fluid Dialog",
+    "page": 279
+  },
+  {
+    "figure": 244,
+    "caption": "Estimate Remaining Trips",
+    "page": 281
+  },
+  {
+    "figure": 252,
+    "caption": "Select a Tool String",
+    "page": 302
+  },
+  {
+    "figure": 254,
+    "caption": "Toolbox Tab",
+    "page": 303
+  },
+  {
+    "figure": 256,
+    "caption": "Tool Search Tab",
+    "page": 304
+  },
+  {
+    "figure": 257,
+    "caption": "Tool String Area",
+    "page": 305
+  },
+  {
+    "figure": 258,
+    "caption": "Tool String Tab",
+    "page": 305
+  },
+  {
+    "figure": 259,
+    "caption": "Properties & Features Tab",
+    "page": 305
+  },
+  {
+    "figure": 260,
+    "caption": "DEFTOOLS Toolbox Expanded",
+    "page": 306
+  },
+  {
+    "figure": 261,
+    "caption": "New Toolbox Dialog",
+    "page": 306
+  },
+  {
+    "figure": 262,
+    "caption": "New Tool Dialog",
+    "page": 308
+  },
+  {
+    "figure": 263,
+    "caption": "Confirm Delete Dialog",
+    "page": 309
+  },
+  {
+    "figure": 264,
+    "caption": "Tools Sorted According to Group Tools By Checkboxes",
+    "page": 310
+  },
+  {
+    "figure": 269,
+    "caption": "The New Tool String dialog appears",
+    "page": 314
+  },
+  {
+    "figure": 274,
+    "caption": "The Tool Editor",
+    "page": 318
+  },
+  {
+    "figure": 286,
+    "caption": "Original",
+    "page": 326
+  },
+  {
+    "figure": 297,
+    "caption": "Select a Well",
+    "page": 336
+  },
+  {
+    "figure": 298,
+    "caption": "Well Editor Main Display Screen",
+    "page": 337
+  },
+  {
+    "figure": 299,
+    "caption": "Well Diagram",
+    "page": 341
+  },
+  {
+    "figure": 300,
+    "caption": "Survey Graph",
+    "page": 343
+  },
+  {
+    "figure": 301,
+    "caption": "Quick Well",
+    "page": 348
+  },
+  {
+    "figure": 302,
+    "caption": "Well Editor General Tab",
+    "page": 349
+  },
+  {
+    "figure": 304,
+    "caption": "Geometry Tab",
+    "page": 356
+  },
+  {
+    "figure": 305,
+    "caption": "Survey Data Display Screen",
+    "page": 357
+  },
+  {
+    "figure": 309,
+    "caption": "Well Editor Friction Tab",
+    "page": 362
+  },
+  {
+    "figure": 310,
+    "caption": "Temperature tab",
+    "page": 363
+  },
+  {
+    "figure": 311,
+    "caption": "Info tab",
+    "page": 364
+  },
+  {
+    "figure": 312,
+    "caption": "Reel Editor Main Screen",
+    "page": 367
+  },
+  {
+    "figure": 313,
+    "caption": "Fluid Editor M ain",
+    "page": 378
+  },
+  {
+    "figure": 315,
+    "caption": "Equipment",
+    "page": 391
+  },
+  {
+    "figure": 316,
+    "caption": "Achilles Calculator Tab",
+    "page": 400
+  },
+  {
+    "figure": 318,
+    "caption": "Achilles Analyzer Tab",
+    "page": 402
+  },
+  {
+    "figure": 319,
+    "caption": "Achilles Analyzer Data Tab",
+    "page": 403
+  },
+  {
+    "figure": 320,
+    "caption": "Achilles Options Tab",
+    "page": 404
+  },
+  {
+    "figure": 321,
+    "caption": "Hercules Display Screen",
+    "page": 410
+  },
+  {
+    "figure": 322,
+    "caption": "Hercules File Menu",
+    "page": 411
+  },
+  {
+    "figure": 323,
+    "caption": "Hercules Options Menu",
+    "page": 412
+  },
+  {
+    "figure": 324,
+    "caption": "Hercules Help Menu",
+    "page": 412
+  },
+  {
+    "figure": 325,
+    "caption": "Hercules Graph Context Menu",
+    "page": 413
+  },
+  {
+    "figure": 326,
+    "caption": "Differential Pressures Graph",
+    "page": 417
+  },
+  {
+    "figure": 328,
+    "caption": "The Min Wt (lockup) is displayed on the graph and within the legend",
+    "page": 421
+  },
+  {
+    "figure": 331,
+    "caption": "Frozen Curve dialog appears",
+    "page": 423
+  },
+  {
+    "figure": 347,
+    "caption": "Legend Coordinates",
+    "page": 441
+  },
+  {
+    "figure": 348,
+    "caption": "The Legend is updated with the values of each c urve at the current mouse depth",
+    "page": 442
+  },
+  {
+    "figure": 358,
+    "caption": "Effect of Equivalent Annular Diameter",
+    "page": 455
+  },
+  {
+    "figure": 376,
+    "caption": "Non - linear vs. Linear Fatigue Points",
+    "page": 470
+  }
+]

@@ -1,0 +1,29 @@
+﻿
+============================================================
+  SEO CHECKER - Search Engine Optimization Audit
+============================================================
+Project: C:\Users\sergi\OneDrive\Documentos\Antigravity Folders\CoiledTubingExpert_CerberusTutor
+Time: 2026-03-11 15:18:57
+------------------------------------------------------------
+Found 2 page files to analyze
+
+============================================================
+SEO ANALYSIS RESULTS
+============================================================
+
+Issue Summary:
+  [1] Missing <title> tag
+  [1] Missing meta description
+  [1] Missing Open Graph tags
+
+Affected files (1):
+  - layout.tsx
+
+{
+  "script": "seo_checker",
+  "project": "C:\\Users\\sergi\\OneDrive\\Documentos\\Antigravity Folders\\CoiledTubingExpert_CerberusTutor",
+  "files_checked": 2,
+  "files_with_issues": 1,
+  "issues_found": 3,
+  "passed": false
+}
