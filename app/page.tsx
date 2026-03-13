@@ -145,7 +145,10 @@ export default function HomePage() {
       
       if (data.error) {
         let errorMsg = '⚠️ Error al procesar la solicitud.';
-        if (data.details?.includes('429') || data.details?.includes('quota')) {
+        
+        if (data.error === 'quota_exceeded' || 
+            data.details?.toLowerCase().includes('quota') || 
+            data.details?.includes('429')) {
           errorMsg = '⚠️ Límite de cuota alcanzado. Por favor, espera unos 60 segundos antes de intentar de nuevo.';
         } else if (data.details) {
           errorMsg = `⚠️ Error: ${data.details}`;

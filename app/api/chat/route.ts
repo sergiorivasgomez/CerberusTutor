@@ -58,12 +58,23 @@ export async function POST(req: NextRequest) {
         return new Response(JSON.stringify({ response: text }), {
             headers: { 'Content-Type': 'application/json' },
         });
-    } catch (error: unknown) {
+    } catch (error: any) {
         console.error('Error in chat API:', error);
-        const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+        
+        const errorMessage = error.message || 'Error desconocido';
+        const isQuotaError = errorMessage.toLowerCase().includes('quota') || 
+                            errorMessage.includes('429') || 
+                            errorMessage.includes('RESOURCE_EXHAUSTED');
+
         return new Response(
-            JSON.stringify({ error: 'Error al procesar la solicitud', details: errorMessage }),
-            { status: 500, headers: { 'Content-Type': 'application/json' } }
+            JSON.stringify({ 
+                error: isQuotaError ? 'quota_exceeded' : 'Error al procesar la solicitud', 
+                details: errorMessage 
+            }),
+            { 
+                status: isQuotaError ? 429 : 500, 
+                headers: { 'Content-Type': 'application/json' } 
+            }
         );
     }
 }
