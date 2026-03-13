@@ -43,8 +43,11 @@ export async function POST(req: NextRequest) {
             parts: [{ text: message }],
         });
 
+        const modelName = 'gemini-1.5-flash';
+        console.log(`[DEBUG] Calling Gemini with model: ${modelName}`);
+
         const response = await genAI.models.generateContent({
-            model: 'gemini-2.0-flash-lite-preview-02-05',
+            model: modelName,
             contents: contents,
             config: {
                 systemInstruction: systemInstruction,

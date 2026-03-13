@@ -144,18 +144,13 @@ export default function HomePage() {
       const data = await response.json();
       
       if (data.error) {
-        let errorMsg = '⚠️ Error al procesar la solicitud.';
+        let errorMsg = '⚠️ Límite de cuota alcanzado (Gemini). Por favor, intenta de nuevo en un minuto.';
         
-        // Convert everything to string for fallback check
-        const fullErrorString = JSON.stringify(data).toLowerCase();
-        
-        if (data.error === 'quota_exceeded' || 
-            fullErrorString.includes('quota') || 
-            fullErrorString.includes('429') ||
-            fullErrorString.includes('resource_exhausted')) {
-          errorMsg = '⚠️ Límite de cuota alcanzado. Por favor, espera unos 60 segundos antes de intentar de nuevo.';
-        } else if (data.details) {
-          errorMsg = `⚠️ Error: ${typeof data.details === 'string' ? data.details : JSON.stringify(data.details)}`;
+        const fullError = JSON.stringify(data).toLowerCase();
+        const isNotQuota = !fullError.includes('quota') && !fullError.includes('429') && !fullError.includes('exhausted');
+
+        if (isNotQuota && data.details) {
+          errorMsg = `⚠️ Error: ${typeof data.details === 'string' ? data.details : 'Error inesperado del servidor.'}`;
         }
 
         setMessages(prev => [...prev, {
