@@ -146,12 +146,16 @@ export default function HomePage() {
       if (data.error) {
         let errorMsg = '⚠️ Error al procesar la solicitud.';
         
+        // Convert everything to string for fallback check
+        const fullErrorString = JSON.stringify(data).toLowerCase();
+        
         if (data.error === 'quota_exceeded' || 
-            data.details?.toLowerCase().includes('quota') || 
-            data.details?.includes('429')) {
+            fullErrorString.includes('quota') || 
+            fullErrorString.includes('429') ||
+            fullErrorString.includes('resource_exhausted')) {
           errorMsg = '⚠️ Límite de cuota alcanzado. Por favor, espera unos 60 segundos antes de intentar de nuevo.';
         } else if (data.details) {
-          errorMsg = `⚠️ Error: ${data.details}`;
+          errorMsg = `⚠️ Error: ${typeof data.details === 'string' ? data.details : JSON.stringify(data.details)}`;
         }
 
         setMessages(prev => [...prev, {
