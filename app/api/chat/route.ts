@@ -3,6 +3,7 @@ import { NextRequest } from 'next/server';
 import { SYSTEM_PROMPT, CERBERUS_CONTEXT_INSTRUCTION } from '@/lib/system-prompt';
 import { getManualContext } from '@/lib/manual-loader';
 
+// Trigger redeploy: 2026-03-12 21:18
 export async function POST(req: NextRequest) {
     try {
         const apiKey = process.env.GEMINI_API_KEY;
