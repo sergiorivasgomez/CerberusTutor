@@ -59,7 +59,10 @@ export async function POST(req: NextRequest) {
         const text = response?.text || 'No se pudo generar una respuesta.';
 
         return new Response(JSON.stringify({ response: text }), {
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json',
+                'X-App-Version': '1.0.1-flash15'
+            },
         });
     } catch (error: any) {
         console.error('Error in chat API:', error);
