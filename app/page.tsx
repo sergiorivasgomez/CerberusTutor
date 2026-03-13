@@ -144,19 +144,19 @@ export default function HomePage() {
       const data = await response.json();
       
       if (data.error) {
-        let errorMsg = '⚠️ Límite de cuota alcanzado (Gemini). Por favor, intenta de nuevo en un minuto.';
+        // STRICT ERROR WHITELIST: No raw technical data leaks to user
+        let friendlyMsg = '⚠️ Error inesperado. Por favor, intenta de nuevo.';
         
-        const fullError = JSON.stringify(data).toLowerCase();
-        const isNotQuota = !fullError.includes('quota') && !fullError.includes('429') && !fullError.includes('exhausted');
-
-        if (isNotQuota && data.details) {
-          errorMsg = `⚠️ Error: ${typeof data.details === 'string' ? data.details : 'Error inesperado del servidor.'}`;
+        if (data.error === 'quota_exceeded') {
+          friendlyMsg = '⚠️ Límite de cuota alcanzado (Gemini). Por favor, intenta de nuevo en un minuto o mañana.';
+        } else if (data.error === 'internal_error') {
+          friendlyMsg = '⚠️ El sistema está experimentando alta demanda. Por favor, reintenta en unos instantes.';
         }
 
         setMessages(prev => [...prev, {
           id: crypto.randomUUID(),
           role: 'assistant',
-          content: errorMsg,
+          content: friendlyMsg,
           mode: activeMode,
         }]);
         return;

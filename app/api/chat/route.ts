@@ -43,39 +43,42 @@ export async function POST(req: NextRequest) {
             parts: [{ text: message }],
         });
 
-        const modelName = 'gemini-1.5-flash';
-        console.log(`[DEBUG] Calling Gemini with model: ${modelName}`);
-
-        const response = await genAI.models.generateContent({
+        const modelName = 'models/gemini-1.5-flash';
+        
+        const model = genAI.getGenerativeModel({ 
             model: modelName,
+            systemInstruction: systemInstruction,
+        });
+
+        const result = await model.generateContent({
             contents: contents,
-            config: {
-                systemInstruction: systemInstruction,
+            generationConfig: {
                 temperature: 0.7,
                 maxOutputTokens: 8192,
             },
         });
 
-        const text = response?.text || 'No se pudo generar una respuesta.';
+        const response = await result.response;
+        const text = response.text() || 'No se pudo generar una respuesta.';
 
         return new Response(JSON.stringify({ response: text }), {
             headers: { 
                 'Content-Type': 'application/json',
-                'X-App-Version': '1.0.1-flash15'
+                'X-App-Version': '1.0.2-opaque-shield'
             },
         });
     } catch (error: any) {
         console.error('Error in chat API:', error);
         
-        const errorMessage = error.message || 'Error desconocido';
+        const errorMessage = error.message || '';
         const isQuotaError = errorMessage.toLowerCase().includes('quota') || 
                             errorMessage.includes('429') || 
+                            errorMessage.includes('limit') ||
                             errorMessage.includes('RESOURCE_EXHAUSTED');
 
         return new Response(
             JSON.stringify({ 
-                error: isQuotaError ? 'quota_exceeded' : 'Error al procesar la solicitud', 
-                details: errorMessage 
+                error: isQuotaError ? 'quota_exceeded' : 'internal_error'
             }),
             { 
                 status: isQuotaError ? 429 : 500, 
