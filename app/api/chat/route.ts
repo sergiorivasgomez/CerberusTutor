@@ -1,4 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest } from 'next/server';
 import { SYSTEM_PROMPT, CERBERUS_CONTEXT_INSTRUCTION } from '@/lib/system-prompt';
 import { getManualContext } from '@/lib/manual-loader';
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
             });
         }
 
-        const genAI = new GoogleGenAI({ apiKey });
+        const genAI = new GoogleGenerativeAI(apiKey);
         const { message, mode, history } = await req.json();
 
         let systemInstruction = SYSTEM_PROMPT;
