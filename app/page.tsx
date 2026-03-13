@@ -31,20 +31,44 @@ export default function HomePage() {
 
   // Initialize session ID and load history on mount
   useEffect(() => {
-    setSessionId(crypto.randomUUID());
-    const stored = localStorage.getItem('ct_expert_sessions');
-    if (stored) {
+    // 1. Check for active session
+    const activeSessionId = localStorage.getItem('ct_expert_active_session_id');
+    const storedSessions = localStorage.getItem('ct_expert_sessions');
+    
+    let parsedSessions: ChatSession[] = [];
+    if (storedSessions) {
       try {
-        setSessions(JSON.parse(stored));
+        parsedSessions = JSON.parse(storedSessions);
+        setSessions(parsedSessions);
       } catch (e) {
         console.error("Failed to parse sessions", e);
       }
     }
+
+    if (activeSessionId) {
+      const active = parsedSessions.find(s => s.id === activeSessionId);
+      if (active) {
+        setSessionId(active.id);
+        setMessages(active.messages);
+        setMode(active.mode);
+        setShowLanding(false); // Skip landing if active session exists
+        return;
+      }
+    }
+
+    // Default: new session
+    setSessionId(crypto.randomUUID());
   }, []);
 
   // Save session whenever messages change
   useEffect(() => {
-    if (messages.length === 0 || !sessionId) return;
+    if (messages.length === 0 || !sessionId) {
+      localStorage.removeItem('ct_expert_active_session_id');
+      return;
+    }
+
+    // Mark as active session
+    localStorage.setItem('ct_expert_active_session_id', sessionId);
 
     setSessions(prev => {
       const existingIdx = prev.findIndex(s => s.id === sessionId);
