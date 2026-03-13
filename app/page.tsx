@@ -142,17 +142,32 @@ export default function HomePage() {
       });
 
       const data = await response.json();
-      const content = data.error
-        ? `⚠️ Error: ${data.error}\n\n${data.details ?? ''}`
-        : data.response;
+      
+      if (data.error) {
+        let errorMsg = '⚠️ Error al procesar la solicitud.';
+        if (data.details?.includes('429') || data.details?.includes('quota')) {
+          errorMsg = '⚠️ Límite de cuota alcanzado. Por favor, espera unos 60 segundos antes de intentar de nuevo.';
+        } else if (data.details) {
+          errorMsg = `⚠️ Error: ${data.details}`;
+        }
+
+        setMessages(prev => [...prev, {
+          id: crypto.randomUUID(),
+          role: 'assistant',
+          content: errorMsg,
+          mode: activeMode,
+        }]);
+        return;
+      }
 
       setMessages(prev => [...prev, {
         id: crypto.randomUUID(),
         role: 'assistant',
-        content,
+        content: data.response,
         mode: activeMode,
       }]);
-    } catch {
+    } catch (err) {
+      console.error('Chat error:', err);
       setMessages(prev => [...prev, {
         id: crypto.randomUUID(),
         role: 'assistant',
